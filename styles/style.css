@@ -1,0 +1,314 @@
+@font-face {
+    font-family: "Helvetica Neue Regular";
+    src: url(../fonts/helveticaneue/HelveticaNeue\ Light.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "Helvetica Neue Bold";
+    src: url(../fonts/Helvetica\ Neu\ Bold.ttf) format(truetype);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font_regular);
+}
+
+:root{
+    --color_primary: #707070;
+    --color_secondary: #888888;
+    --color_tertiary: #00000029;
+    --font_bold: "Helvetica Neue Bold", sans-serif;
+    --font_regular: "Helvetica Neue Regular", sans-serif;
+}
+
+.container{
+    width: 386px;
+    margin: 0 auto;
+}
+
+.home{
+    width: 100vw;
+    background: var(--color_primary);
+    margin: 0 auto;
+    color: white;
+    padding: 66px 0;
+
+}
+
+.home .homeText > h1{
+    font-size: 20px;
+}
+
+.home .homeText > h2{
+    font-size: 40px;
+    font-family: var(--font_bold);
+}
+
+.home .homeText > P{
+    font-size: 14px;
+}
+
+.home .homeButtons{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.home .homeButtons .button{
+    width: 160px;
+    height: 40px;
+    background-color: white;
+    color: var(--color_secondary);
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid var(--color_secondary);
+
+    
+}
+
+.home .homeButtons .button:nth-child(1), .home .homeButtons .button:nth-child(2){
+    margin-bottom: 20px;
+}
+
+.home .homeButtons .button:nth-child(1), .home .homeButtons .button:nth-child(3){
+    margin-right: 21px;
+}
+
+.signUp .signUpText{
+    padding: 20px 0 40px 0;
+}
+
+.signUp .signUpText > h2{
+    font-size: 20px;
+    color: var(--color_secondary);
+    margin-bottom: 10px;
+}
+
+.signUp .signUpText > p{
+    font-size: 12px;
+    color: var(--color_secondary);
+    margin-bottom: 20px;
+}
+
+.signUp .formSignUp{
+    display: flex;
+    flex-direction: column;
+}
+
+.signUp .formSignUp > label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.signUp .formSignUp > input{
+    height: 30px;
+    border: 1px solid var(--color_primary);
+}
+
+.signUp .formSignUp input{
+    margin-bottom: 20px;
+}
+
+.signUp .formSignUp .buttonSignUp{
+    background-color: white;
+    color: var(--color_primary); 
+    border: 1px solid var(--color_primary);
+    border-radius: 4px;
+    height: 39px;
+    margin-bottom: 80px;
+}
+
+.signUp .formSignUp > label, .signUp .formSignUp > div > label{
+    font-size: 12px;
+    color: var(--color_secondary);
+}
+
+.signUp .formSignUp > div{
+    display: flex;
+}
+
+.signUp .formSignUp > div input{
+    margin-right: 3px;
+}
+
+.signUp .formSignUp > div label{
+    margin-right: 40px;
+}
+
+.products > h2{
+    text-align: center;
+    color: var(--color_primary);
+    font-size: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.products > h2:after, .products > h2:before{
+    content: "";
+    background-color: var(--color_primary);
+    display: inline-block;
+    height: 1.55px;
+    position: relative;
+    vertical-align: middle;
+    width: 25vw;
+}
+
+.products > h2:after{
+    left: 5vw;
+}
+
+.products > h2:before{
+    right: 5vw;
+}
+
+.products .container .listProducts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1200px;
+}
+
+.products .container .listProducts .item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.products .container .listProducts .item .photoProduct{
+    width: 169px; 
+    height: 129px; 
+    border: 1.5px solid var(--color_primary);
+}
+
+.products .container .listProducts .item .infoProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.products .container .listProducts .item .infoProduct > h4{
+    font-size: 14px;
+    color: var(--color_secondary);
+
+}
+
+.products .container .listProducts .item span{
+    display: block;
+    color: var(--color_secondary);
+    font-size: 12px;
+}
+
+.products .container .listProducts .item span:nth-child(3){
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.products .container .listProducts .item .infoProduct .buy{
+    width: 200px;
+    height: 30px;
+    background: white;
+    border: 1px solid var(--color_primary);
+    border-radius: 4px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color_secondary);
+}
+
+.products .container .showMoreProducts{
+    display: block;
+    background-color: white;
+    border: 2px solid var(--color_secondary);
+    width: 260px;
+    height: 39px;
+    border-radius: 4px;
+    margin: 40px auto 110px auto;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color_secondary);
+}
+
+.share > h2{
+    text-align: center;
+    color: var(--color_primary);
+    font-size: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.share > h2:after, .share > h2:before{
+    content: "";
+    background-color: var(--color_primary);
+    display: inline-block;
+    height: 1.55px;
+    position: relative;
+    vertical-align: middle;
+    width: 25vw;
+}
+
+.share > h2:after{
+    left: 5vw;
+}
+
+.share > h2:before{
+    right: 5vw;
+}
+
+.share .container p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color_secondary);
+}
+
+.share .container .formShare{
+    display: flex;
+    flex-direction: column;
+}
+
+.share .container .formShare > label{
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color_secondary);
+    margin-bottom: 5px;
+}
+
+.share .container .formShare > input{
+    height: 30px;
+    border: 1.5px solid var(--color_primary);
+    margin-bottom: 20px;
+}
+
+.share .container .formShare .buttonSendToFriend{
+    background-color: white;
+    color: var(--color_primary); 
+    border: 1px solid var(--color_primary);
+    border-radius: 4px;
+    width: 260px;
+    height: 39px;
+    margin-top: 20px;
+    margin-bottom: 120px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color_secondary);
+
+    align-self: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 157px;
+    background-color: var(--color_primary);
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+
+.footer span{
+    display: block;
+}
