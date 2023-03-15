@@ -51,7 +51,9 @@
 }
 
 .home .homeButtons{
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 50px;
 }
 
@@ -61,10 +63,9 @@
     background-color: white;
     color: var(--color_secondary);
     font-size: 14px;
+    font-weight: bold;
     border-radius: 4px;
     border: 1px solid var(--color_secondary);
-
-    
 }
 
 .home .homeButtons .button:nth-child(1), .home .homeButtons .button:nth-child(2){
@@ -73,6 +74,11 @@
 
 .home .homeButtons .button:nth-child(1), .home .homeButtons .button:nth-child(3){
     margin-right: 21px;
+}
+
+.signUp .container{
+    display: flex;
+    flex-direction: column;
 }
 
 .signUp .signUpText{
@@ -136,30 +142,30 @@
     margin-right: 40px;
 }
 
-.products > h2{
+.products .container > h2{
     text-align: center;
-    color: var(--color_primary);
+    color: var(--color_secondary);
     font-size: 18px;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
-.products > h2:after, .products > h2:before{
+.products .container > h2:after, .products .container > h2:before{
     content: "";
-    background-color: var(--color_primary);
+    background-color: var(--color_secondary);
     display: inline-block;
     height: 1.55px;
     position: relative;
     vertical-align: middle;
-    width: 25vw;
+    width: 40%;
 }
 
-.products > h2:after{
-    left: 5vw;
+.products .container > h2:after{
+    left: 20px;
 }
 
-.products > h2:before{
-    right: 5vw;
+.products .container > h2:before{
+    right: 20px;
 }
 
 .products .container .listProducts{
@@ -198,7 +204,7 @@
     font-size: 12px;
 }
 
-.products .container .listProducts .item span:nth-child(3){
+.products .container .listProducts .item span:nth-child(4){
     font-size: 16px;
     font-weight: bold;
 }
@@ -229,30 +235,30 @@
     color: var(--color_secondary);
 }
 
-.share > h2{
+.share .container > h2{
     text-align: center;
-    color: var(--color_primary);
+    color: var(--color_secondary);
     font-size: 18px;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
-.share > h2:after, .share > h2:before{
+.share .container > h2:after, .share .container > h2:before{
     content: "";
-    background-color: var(--color_primary);
+    background-color: var(--color_secondary);
     display: inline-block;
     height: 1.55px;
     position: relative;
     vertical-align: middle;
-    width: 25vw;
+    width: 38%;
 }
 
-.share > h2:after{
-    left: 5vw;
+.share .container > h2:after{
+    left: 20px;
 }
 
-.share > h2:before{
-    right: 5vw;
+.share .container > h2:before{
+    right: 20px;
 }
 
 .share .container p{
@@ -262,31 +268,37 @@
     color: var(--color_secondary);
 }
 
-.share .container .formShare{
+.share .container .formShare section{
     display: flex;
     flex-direction: column;
 }
 
-.share .container .formShare > label{
+.share .container .formShare div{
+    display: flex;
+    flex-direction: column;
+}
+
+.share .container .formShare div label{
     font-size: 12px;
     font-weight: bold;
     color: var(--color_secondary);
     margin-bottom: 5px;
 }
 
-.share .container .formShare > input{
+.share .container .formShare div input{
     height: 30px;
     border: 1.5px solid var(--color_primary);
     margin-bottom: 20px;
 }
 
 .share .container .formShare .buttonSendToFriend{
+    display: block;
     background-color: white;
-    color: var(--color_primary); 
     border: 1px solid var(--color_primary);
     border-radius: 4px;
     width: 260px;
     height: 39px;
+    margin: 20px auto 120px auto;
     margin-top: 20px;
     margin-bottom: 120px;
 
@@ -311,4 +323,76 @@
 
 .footer span{
     display: block;
+}
+
+@media screen and (min-width: 1500px) {
+    .container{
+        width: 920px;
+    }
+    .home .container .homeText{
+        text-align: center;
+    }
+
+    .home .container .homeText > p{
+        margin-top: 24px;
+    }
+
+    .home .container .homeButtons .button:nth-child(1){
+        margin-right: 40px;
+    }
+
+    .home .container .homeButtons .button:nth-child(3){
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .signUp{
+        margin-top: 20px;
+    }
+
+    .signUp .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .signUp .container .signUpText{
+        width: 520px;
+    }
+
+    .signUp .container .formSignUp{
+        width: 340px;
+    }
+
+    .products .container .listProducts{
+        height: 630px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .products .container .listProducts .item{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .products .container .listProducts .item .photoProduct{
+        width: 200px;
+        height: 150px;
+    }
+
+    .products .container .listProducts .item .infoProduct{
+        line-height: 25px;
+    }
+
+    .share .container .formShare section{
+        width: 720px;
+        margin: 39px auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .share .container .formShare section div input{
+        width: 340px;
+    }
+    
 }
