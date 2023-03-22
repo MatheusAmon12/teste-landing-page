@@ -29,7 +29,6 @@
 }
 
 .home{
-    width: 100vw;
     background: var(--color_primary);
     margin: 0 auto;
     color: white;
@@ -157,7 +156,7 @@
     height: 1.55px;
     position: relative;
     vertical-align: middle;
-    width: 40%;
+    width: 28%;
 }
 
 .products .container > h2:after{
@@ -181,9 +180,11 @@
 }
 
 .products .container .listProducts .item .photoProduct{
+    display: flex;
+    justify-content: center;
+    align-content: center;
     width: 169px; 
     height: 129px; 
-    border: 1.5px solid var(--color_primary);
 }
 
 .products .container .listProducts .item .infoProduct{
@@ -195,10 +196,9 @@
 .products .container .listProducts .item .infoProduct > h4{
     font-size: 14px;
     color: var(--color_secondary);
-
 }
 
-.products .container .listProducts .item span{
+.products .container .listProducts .item .infoProduct span{
     display: block;
     color: var(--color_secondary);
     font-size: 12px;
@@ -250,7 +250,7 @@
     height: 1.55px;
     position: relative;
     vertical-align: middle;
-    width: 38%;
+    width: 26%;
 }
 
 .share .container > h2:after{
@@ -363,8 +363,12 @@
         width: 340px;
     }
 
+    .products .container > h2:after, .products .container > h2:before{
+        width: 41%;
+    }
+
     .products .container .listProducts{
-        height: 630px;
+        height: 800px;
         flex-direction: row;
         flex-wrap: wrap;
         align-content: space-around;
@@ -376,12 +380,23 @@
     }
 
     .products .container .listProducts .item .photoProduct{
+        border: none;
         width: 200px;
         height: 150px;
     }
 
     .products .container .listProducts .item .infoProduct{
+        width: 200px;
         line-height: 25px;
+    }
+
+    .products .container .listProducts .item .infoProduct .descriptionProduct{
+        height: 60px;
+        line-height: 16px;
+    }
+
+    .share .container > h2:after, .share .container > h2:before{
+        width: 39%;
     }
 
     .share .container .formShare section{
